@@ -14,6 +14,7 @@ function getComputerChoice() {
     const randomNumber = Math.floor(Math.random() * 3);
     return choices[randomNumber];
 }
+
 function convertToWord(leter) {
     if (letter === "r") return "Rock";
     if (letter === "p") return "paper";
@@ -30,8 +31,6 @@ function win(userChoice, computerChoice) {
 
 }
 
-
-
 function lose(userChoice, computerChoice) {
     userScore++;
     userScore_span.innerHTML = userScore;
@@ -45,12 +44,11 @@ function lose(userChoice, computerChoice) {
 
 function loses() {
     
-    
     const smalUserWord = "user".fontsize(3).sub();
     const smalcompWord = "comp".fontsize(3).sub();
     result_p.innerHTML = $(convertToWord(userChoice)}${ smallUserWord } beates ${ convertToWord(computerChoice) }${ smllCompWord }. 'its a draw'; 
-
 }
+
 function game(userChoice) {
     const computerChoice = getComputerChoice();
     switch (userChoice + computerChoice) {
