@@ -43,7 +43,7 @@ function lose(userChoice, computerChoice) {
 }
 
 
-function loses() {
+function draw() {
     
     const smalUserWord = "user".fontsize(3).sub();
     const smalcompWord = "comp".fontsize(3).sub();
