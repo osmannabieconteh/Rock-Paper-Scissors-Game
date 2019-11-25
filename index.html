@@ -1,49 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
 
-<head>
+<html lang="en-us">
+
+  <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=>, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="assets.css/style.css">
-    <img src="" alt="">
-</head>
+    <title>Multiplayer Rocks Paper Scissors</title>
 
-<body>
+    <!-- CSS reset sheet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+
+    <!-- Our Own CSS File -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Firebase References -->
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+
+  </head>
+
+  <body>
+
     <header>
-        <hi>Rock Paper Scissorce</hi>
+      <h1>Rock Paper Scissors</h1>
     </header>
-    <div class="score-bored">
-        <div id="use-label" class="badges">user</div>
-        <div id="computer label-label" class="badges">comp</div>
 
-        <span id="user-score">0</span>:<span id="computer-score">0</span>
-    </div>
-    <divc class="resuls">
-        <p>Papper Covers Rock. you Win!</p>
+    <div id="sizer">
+
+      <div id="swap-zone"><input id="username" placeholder="Name"/>
+        <button id="start">Start</button>
+      </div>
+
+      <div id="current-turn"><h2></h2></div>
+
+      <div id="game-div">
+
+        <div id="player1">
+
+          <h3 id="player1-name" src="../" style="width:200px;height:200px;" alt=""></h3>>Player1</h3>
+          <ul>
+          </ul>
+          <div id="player1-chosen"></div>
+          <div class="outcomes">
+            <div class="outcome-trackers" id="player1-wins"></div>
+            <div class="outcome-trackers" id="player1-losses"></div>
+          </div>
         </div>
-        <div class="choices">
-            <div class="choices" id="r">
-                <img src="images/MustFitness.jpg" style="width:200px;height:200px;" alt="">
 
-                 
-            </div>
-            <div class="choices">
-                <div class="choices" id="p">
-                    <img src="images/imgs7.jpg" style="width:200px;height:200px;" alt="">
-                </div>
-                <div class="choices" id="s">
-                    <div class="choices">
-                        <img src="images/images5.jpg" style="width:200px;height:200px;" alt="">
-                    </div>
-                </div>
-               
-               <p id="actionmessage"> Make Yoour Move</p> 
-               <script  src="open.js"></script>
-               <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-</body>
+        <div id="result"><h2></h2></div>
 
-</html> 
+        <div id="player2">
+          <h3 id="player2-name">Player2</h3>
+          <ul>
+          </ul>
+          <div id="player2-chosen"></div>
+          <div class="outcomes">
+            <div class="outcome-trackers" id="player2-wins"></div>
+            <div class="outcome-trackers" id="player2-losses"></div>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="chat">
+        <div id="chat-messages"></div>
+        <div id="chat-bar">
+          <input id="chat-input" />
+          <button id="chat-send">Send</button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Script -->
+    <script src="app.js"></script>
+
+  </body>
+
+</html>
+
